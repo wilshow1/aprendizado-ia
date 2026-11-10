@@ -52,4 +52,3 @@ Desenvolvido em Python, com funções, listas, estruturas condicionais, laços d
 
 ---
 
-Desenvolvido por **Wilson Silva Monteiro**.
