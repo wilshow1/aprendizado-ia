@@ -3,7 +3,7 @@ def classificar_com_ia(texto):
     texto = texto.lower()
 
     palavras_negativas = [
-    "fria", "atrasou", "faltou", "ruim", "péssimo",
+    "fria", "atrasou", "faltou", "ruim", "péssimo","não",
     ]
     palavras_positivas = [
      "simpático", "amei", "ótimo", "excelente",
@@ -47,4 +47,30 @@ for texto in comentarios:
 
     else:
         print(f"comentário neutro: {texto}")
-    
+
+while True:
+    texto = input("Digite um comentário: ")
+    if texto.strip() == "":
+        print("Por favor, digite um comentário para continuar.")
+        continue
+    if texto.lower() == "sair":
+        print("Programa encerrado!")
+        break
+    resultado = classificar_com_ia(texto)
+    print("Classificação do comentário:", resultado)
+    break
+
+while True:
+    try:
+        avaliacao = int(input("Nos dê uma avaliação de 1 a 5: "))
+    except ValueError:
+        print("Entrada inválida. Por favor, insira um número.")
+        continue
+        
+    if 1 <= avaliacao <= 5:
+        print("Avaliação recebida: ", avaliacao)
+        break
+
+    else:
+        print("Avaliação inválida. Por favor, insira um número entre 1 e 5.")
+        continue
